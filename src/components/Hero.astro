@@ -1,0 +1,92 @@
+---
+import { ArrowRight, UserPlus } from "lucide-react";
+// In Astro, public images are referenced by root relative path
+const HeroPreview = "/pages/landing-pages/ilustrasi-no-bg.png"; // Assuming standard copy
+---
+
+<section
+	class="md:px-20 px-4 relative min-h-screen flex items-center justify-center overflow-hidden bg-white"
+>
+	<!-- Background Elements -->
+	<div
+		class="absolute top-[10%] left-[5%] w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl opacity-50"
+	>
+	</div>
+	<div
+		class="absolute bottom-[10%] right-[5%] w-[400px] h-[400px] bg-secondary/80 rounded-full blur-3xl opacity-50"
+	>
+	</div>
+
+	<div
+		class="relative z-10 container mx-auto flex flex-col md:flex-row gap-12 items-center pt-24 pb-12 px-6"
+	>
+		<div
+			class="flex flex-col items-center text-center md:items-start md:text-left md:flex-1"
+		>
+			<div
+				class="font-mono text-sm md:text-base px-4 py-2 rounded-full bg-secondary border border-gray-200 text-gray-600 mb-8 transform -rotate-1"
+			>
+				#diSakuinAja
+			</div>
+
+			<h1
+				class="font-sans font-bold text-4xl md:text-6xl text-gray-900 leading-tight mb-6 tracking-tighter"
+			>
+				SaKu -
+				<span class="text-primary">Sahabat Kuliah</span>
+			</h1>
+
+			<p
+				class="font-mono text-lg sm:text-xl md:text-2xl text-gray-500 mb-8 md:mb-12 max-w-2xl"
+			>
+				Layanan <span class="bg-primary/10 px-1 text-primary font-bold"
+					>Ojek Online</span
+				> dari mahasiswa, oleh mahasiswa, untuk mahasiswa.
+			</p>
+
+			<div class="flex flex-col w-full sm:w-auto sm:flex-row gap-4">
+				<a
+					href="https://app.saku.click"
+					target="_blank"
+					class="font-mono font-semibold text-base md:text-lg bg-primary text-white px-8 py-3 md:px-10 md:py-4 rounded-full transition-all duration-300 hover:scale-105 flex items-center justify-center shadow-lg shadow-primary/20"
+				>
+					Mulai Pesan
+					<ArrowRight className="w-5 h-5 ml-2" stroke-width={2.5} />
+				</a>
+				<a
+					href="https://driver.saku.click"
+					target="_blank"
+					class="font-mono font-semibold text-base md:text-lg bg-white border border-gray-200 text-gray-700 px-8 py-3 md:px-10 md:py-4 rounded-full transition-all duration-300 hover:bg-gray-50 hover:border-gray-300 flex items-center justify-center"
+				>
+					Gabung Driver
+					<UserPlus
+						className="w-5 h-5 md:w-6 md:h-6 ml-2"
+						stroke-width={1.5}
+					/>
+				</a>
+			</div>
+		</div>
+
+		<div
+			class="relative hidden md:flex items-center justify-center md:flex-1 h-[500px]"
+		>
+			<!-- Abstract Shapes for Hero Image Background -->
+			<div class="absolute w-[450px] h-[450px] bg-secondary rounded-full">
+			</div>
+			<div
+				class="absolute w-[350px] h-[350px] border border-gray-200 rounded-full animate-[spin_10s_linear_infinite]"
+			>
+			</div>
+
+			<div
+				class="relative z-10 transform hover:-translate-y-2 transition-transform duration-500"
+			>
+				<img
+					src={HeroPreview}
+					alt="App Screenshot"
+					class="w-[350px] md:w-[400px] drop-shadow-2xl"
+				/>
+			</div>
+		</div>
+	</div>
+</section>

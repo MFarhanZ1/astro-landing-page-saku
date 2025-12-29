@@ -1,0 +1,82 @@
+---
+import { Instagram, Twitter } from "lucide-react";
+// Assuming saku logo is in public/globals/saku-logo-512x512.png
+const SakuLogo = "/globals/saku-logo-512x512.png";
+
+// Custom icons using standard SVG
+const ThreadsIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M12 9a4 4 0 1 0 0 6 4 4 0 0 0 0-6Z"/><path d="M12 15c-6.627 0-10-3.373-10-8s3.373-8 10-8 10 3.373 10 8-3.373 8-10 8Z"/><path d="M12 15c-6.627 0-10 3.373-10 8s3.373 8 10 8 10-3.373 10-8-3.373-8-10-8Z"/></svg>`;
+
+const TiktokIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M21 7.5a1 1 0 0 1-1-1v-2.5a1 1 0 0 0-1-1H16.5a1 1 0 0 0-1 1v10.5a2.5 2.5 0 1 1-5 0V10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v5.5a5.5 5.5 0 1 0 11 0v-5.5a1 1 0 0 0-1-1h-2.5a1 1 0 0 1-1 1V7.5a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1Z"/></svg>`;
+---
+
+<footer class="px-13 py-12 bg-gray-50 border-t border-gray-200">
+	<div class="container mx-auto px-6">
+		<div
+			class="flex flex-col md:flex-row gap-12 mb-12 md:mb-16 justify-between items-center md:items-start"
+		>
+			<div class="text-center md:text-left">
+				<div
+					class="flex justify-center md:justify-start items-center h-full gap-3 font-sans text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-emerald-600 mb-5"
+				>
+					<img
+						class="rounded-md w-10 h-10 shadow-sm"
+						src={SakuLogo}
+						alt="Logo SaKu"
+					/>
+					<span>
+						saku<span
+							class="italic font-medium text-gray-400 font-mono"
+							>.click</span
+						>
+					</span>
+				</div>
+				<p
+					class="font-mono text-gray-500 mx-auto md:mx-0 max-w-sm text-sm"
+				>
+					#diSakuinAja - Layanan ojek online dari mahasiswa, oleh
+					mahasiswa, untuk mahasiswa.
+				</p>
+			</div>
+
+			<div class="text-center md:text-right">
+				<div
+					class="flex space-x-6 justify-center md:justify-end items-center h-full"
+				>
+					<a
+						href="#"
+						aria-label="Instagram"
+						class="text-gray-400 hover:text-primary transition-colors duration-200"
+					>
+						<Instagram className="w-6 h-6" />
+					</a>
+					<a
+						href="#"
+						aria-label="Twitter"
+						class="text-gray-400 hover:text-primary transition-colors duration-200"
+					>
+						<Twitter className="w-6 h-6" />
+					</a>
+					<a
+						href="#"
+						aria-label="Threads"
+						class="text-gray-400 hover:text-primary transition-colors duration-200"
+						set:html={ThreadsIcon}
+					/>
+					<a
+						href="#"
+						aria-label="TikTok"
+						class="text-gray-400 hover:text-primary transition-colors duration-200"
+						set:html={TiktokIcon}
+					/>
+				</div>
+			</div>
+		</div>
+
+		<div class="border-t border-gray-200 pt-10 text-center">
+			<p class="font-mono text-gray-400 text-sm">
+				© {new Date().getFullYear()} Sahabat Kuliah (SaKu). Dibuat dengan
+				❤️ di Pekanbaru.
+			</p>
+		</div>
+	</div>
+</footer>
