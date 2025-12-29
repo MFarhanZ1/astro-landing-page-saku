@@ -11,6 +11,7 @@
   "dependencies": {
     "@astrojs/node": "^9.4.4",
     "@astrojs/react": "^4.4.0",
+    "@astrojs/vercel": "^9.0.2",
     "@fontsource-variable/sora": "^5.2.8",
     "@fontsource/geist-mono": "^5.2.7",
     "@fontsource/space-grotesk": "^5.2.10",
