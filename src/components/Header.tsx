@@ -62,15 +62,24 @@ export const Header = () => {
                         href="#lokasi"
                         className="text-gray-600 hover:text-primary transition-colors duration-200 text-sm"
                     >
-                        Coverage Area
+                        Area Layanan Kami
                     </a>
                 </nav>
 
                 {/* Tombol CTA */}
-                <a href="#install" className="flex items-center justify-center font-mono font-semibold bg-primary text-white px-4 py-2 rounded-full hover:bg-primary/90 transition-all duration-200 text-xs sm:text-sm shrink-0 shadow-sm">
-                    <DownloadIcon className="mr-2 h-4 w-4" />
-                    <span>Unduh App</span>
-                </a>
+                <div className="flex items-center gap-2">
+                    <a
+                        href="#install"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById('install')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        className="flex items-center justify-center font-mono font-semibold bg-primary text-white border border-primary px-4 py-2 rounded-full hover:bg-primary/90 transition-all duration-200 text-xs sm:text-sm shrink-0 shadow-sm"
+                    >
+                        <DownloadIcon className="mr-2 h-4 w-4" />
+                        <span>Unduh App</span>
+                    </a>
+                </div>
             </div>
         </header>
     );
